@@ -99,11 +99,11 @@ flowchart TB
     subgraph Practice["Dental Practice (per Hub machine)"]
         Agent["Agent Process<br/>.NET Framework 4.8"]
         SQLite[("Local SQLite<br/>Image / Session tables")]
-        imaging software["imaging software"]
+        ImagingSoftware["Imaging Software"]
         EventLog["Windows Event Log"]
         Agent -->|reads| SQLite
         Agent -->|watches| EventLog
-        Agent -.monitors.-> imaging software
+        Agent -.monitors.-> ImagingSoftware
     end
 
     subgraph Backend["Portal Backend (ASP.NET Core 8) on AWS"]
